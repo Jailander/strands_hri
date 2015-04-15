@@ -157,7 +157,7 @@ class GUI_Destination_Selection(object):
             proxy = rospy.ServiceProxy('/query_node_metadata', NodeMetadata)
             for c in self.categories:
                 # print "Getting", c
-                res = proxy(NodeMetadataRequest("aaf_bellbot", "aaf_bellbot", c)) # 'office' | 'Meeting Rooms'
+                res = proxy(NodeMetadataRequest("aaf_winter", "aaf_predep", c)) # 'office' | 'Meeting Rooms'
                 for i in range(0, len(res.name)):
                     foo = res.name[i]
                     # foo = res.name[i].replace("-", "_")
